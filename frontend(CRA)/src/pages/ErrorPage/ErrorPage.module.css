@@ -1,0 +1,41 @@
+.errorPageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+  }
+  
+  .errorPageContainer {
+    text-align: center;
+    background-color: black;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .errorHeader {
+    font-size: 2.5rem;
+    color: #dc3545;
+    margin-bottom: 20px;
+  }
+  
+  .errorMessage {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 30px;
+  }
+  
+  .homeButton {
+    background-color: #3861fb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .homeButton:hover {
+    background-color: #2a4fc7;
+  }

@@ -1,0 +1,35 @@
+/* src/components/Pagination/Pagination.module.css */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.pageBtn {
+  background: #007bff;
+  border: none;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.pageBtn:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+.pageBtn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.pageInfo {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}

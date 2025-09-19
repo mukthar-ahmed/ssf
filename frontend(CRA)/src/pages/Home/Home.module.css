@@ -1,0 +1,424 @@
+/* .header {
+  font-size: 32px;
+  margin: 20px 0 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; 
+}
+
+.card {
+  background-color: black;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%; 
+  max-width: 300px; 
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box; 
+}
+
+.card img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto; 
+}
+
+.card h3 {
+  text-align: left;
+  background-color: transparent;
+  color: #fff;
+  margin-top: 15px;
+}
+
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%; 
+    margin: 20px 0; 
+  }
+} */
+
+.home {
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.home h1 {
+  font-size: 5.5rem;
+}
+
+.home h2 {
+  font-size: 3rem;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 11rem;
+  background-size: 100rem 11rem;
+  background-repeat: repeat-x;
+}
+
+.wave1 {
+  animation: waveAnim 8s linear infinite;
+}
+
+.wave2 {
+  animation: waveAnimReverse 6s linear infinite;
+  opacity: 0.3;
+}
+
+.wave3 {
+  animation: waveAnim 4s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes waveAnim {
+  0% { background-position-x: 0; }
+  100% { background-position-x: 100rem; }
+}
+
+@keyframes waveAnimReverse {
+  0% { background-position-x: 0; }
+  100% { background-position-x: -100rem; }
+}
+
+/* About */
+.about {
+  padding: 6rem 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.heading {
+  font-size: 3.5rem;
+  color: #002e5f;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  max-width: 800px;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+  border: 2px solid #002e5f;
+  background: white;
+  color: #002e5f;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #002e5f;
+  color: white;
+}
+
+/* Services */
+.services {
+  background: #f2f2f2;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.sectionHead h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.sectionHead p {
+  font-size: 1.8rem;
+  color: #555;
+  margin-bottom: 3rem;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.item {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 25px rgba(0,0,0,0.07);
+  transition: all 0.3s ease;
+}
+
+.item:hover {
+  background: #c8d8e4;
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.feature_box_col_one { color: #52ab98; }
+.feature_box_col_two { color: #ffa500; }
+.feature_box_col_three { color: #00bfff; }
+
+/* Team */
+.teamSection {
+  background-color: #1e1e1e;
+  padding: 5rem 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+.teamSection .heading {
+  color: #00bfff;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.teamRow {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  scrollbar-width: none; /* Firefox */
+}
+
+.teamRow::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.card {
+  flex: 0 0 85%;
+  max-width: 300px;
+  scroll-snap-align: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: #111;
+  margin: auto;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.image img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid white;
+  background: #f0f0f0;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.card span {
+  font-size: 0.9rem;
+  color: #00bfff;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+.socialIcons i {
+  color: #555;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.socialIcons i:hover {
+  color: #00bfff;
+}
+
+/* Carousel Dots */
+.carouselDots {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ccc;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: #4e88ff;
+}
+
+
+.info {
+  padding: 1rem;
+}
+
+.info h3 {
+  margin: 0.5rem 0;
+  font-size: 1.8rem;
+}
+
+.info span {
+  color: gray;
+  font-size: 1.4rem;
+}
+
+/* Testimonials */
+.testimonials {
+  background: #f2f2f2;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.sectionHeader h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.testimonialItem {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.testimonialText h3 {
+  font-size: 2rem;
+}
+
+.testimonialText h4 {
+  font-size: 1.5rem;
+  color: gray;
+  margin-bottom: 1rem;
+}
+
+.testimonialText p {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+
+
+
+/* Animated SSF logo wrapper */
+.logoWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0 2rem;
+  pointer-events: none; /* decorative only */
+}
+
+/* SVG sizing - responsive */
+.ssfLogo {
+  width: 280px;
+  max-width: 85%;
+  height: auto;
+  will-change: transform;
+}
+
+/* gentle overall bob */
+@keyframes ssf-bob {
+  0%   { transform: translateY(0) scale(1); }
+  50%  { transform: translateY(-6px) scale(1.01); }
+  100% { transform: translateY(0) scale(1); }
+}
+.ssfLogo {
+  animation: ssf-bob 6s ease-in-out infinite;
+}
+
+/* ribbon band base */
+.band {
+  transform-origin: 50% 50%;
+  transition: transform 0.3s ease;
+  will-change: transform, opacity;
+}
+
+/* blue band: subtle twisting */
+@keyframes twistBlue {
+  0%   { transform: translateY(0) rotate(0deg) skewY(0deg); }
+  50%  { transform: translateY(-4px) rotate(-3deg) skewY(2deg); }
+  100% { transform: translateY(0) rotate(0deg) skewY(0deg); }
+}
+.bandBlue {
+  animation: twistBlue 4.4s ease-in-out infinite;
+}
+
+/* green band: opposite phase for depth */
+@keyframes twistGreen {
+  0%   { transform: translateY(0) rotate(0deg) skewY(0deg); }
+  50%  { transform: translateY(5px) rotate(3deg) skewY(-2deg); }
+  100% { transform: translateY(0) rotate(0deg) skewY(0deg); }
+}
+.bandGreen {
+  animation: twistGreen 4.4s ease-in-out infinite;
+  opacity: 0.98;
+}
+
+/* small right swoosh pops slightly */
+@keyframes swooshPop {
+  0%   { transform: translateX(0) scale(1); opacity: 0.9; }
+  50%  { transform: translateX(2px) scale(1.03); opacity: 1; }
+  100% { transform: translateX(0) scale(1); opacity: 0.9; }
+}
+.swoosh {
+  transform-origin: 70% 30%;
+  animation: swooshPop 3.6s ease-in-out infinite;
+}
+
+/* make it larger on big screens */
+@media (min-width: 1024px) {
+  .ssfLogo { width: 340px; }
+}

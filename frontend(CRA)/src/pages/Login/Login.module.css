@@ -1,0 +1,133 @@
+.loginWrapper {
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+}
+
+.loginContainer {
+  width: 100%;
+  max-width: 300px;
+  padding: 40px 20px;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  box-shadow: 0 0 20px var(--input-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px; 
+}
+
+.loginHeader {
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  background-color: transparent;
+}
+
+.loginLogo {
+  height: 50px;
+  background-color: transparent;
+}
+
+.loginText {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--text-color);
+  background-color: transparent;
+}
+
+
+.inputField {
+  padding: 14px 20px;
+  outline: none;
+  width: 66%;
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  font-size: 18px;
+  margin:2px;
+  background-color: transparent;
+  color: var(--text-color);
+}
+
+.inputField::placeholder {
+  color: var(--muted-text);
+}
+
+.invalidCredentialsError {
+  color: #ea3943;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.logInButton {
+  background-color: #3861fb;
+  color: white;
+  border: none;
+  outline: none;
+  width: 80%;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 20px 0 15px;
+  transition: all 0.2s ease;
+}
+
+.logInButton:disabled {
+  background-color: #6e8dfc;
+  cursor: not-allowed;
+}
+
+.logInButton:hover:not(:disabled) {
+  background-color: #2a56f5;
+  transform: translateY(-1px);
+}
+
+.createAccount {
+  background-color: transparent;
+  margin-top: 15px;
+  margin-left: 8px;
+  color: #16c784;
+  font-size: 16px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  transition: color 0.2s ease;
+
+}
+
+.createAccount:hover {
+  color: #14b377;
+  text-decoration: underline;
+}
+
+.passwordContainer {
+  
+  width: 80%;
+  align-items: center;
+  border: 1px solid var(--input-border);
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.passwordContainer input{
+  border:none;
+}
+
+.togglePasswordButton {
+  border:none;
+  font-size: 15px;
+  background-color: transparent;
+  color: var(--text-color);
+}

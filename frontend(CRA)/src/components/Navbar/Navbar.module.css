@@ -1,0 +1,226 @@
+.navbar {
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--bg-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text-color);
+  white-space: nowrap;
+}
+
+
+
+/* Mobile Controls container */
+.mobileControls {
+  display: none; /* Hidden by default on desktop */
+  align-items: center;
+  gap: 15px;
+}
+
+.menuIcon {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+}
+
+.menuIcon .bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.menuIcon.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menuIcon.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menuIcon.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.navElements {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.centerLinks {
+  display: flex;
+  gap: 20px;
+  margin: 0 auto;
+}
+
+.authButtons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.navElements a {
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.activeStyle {
+  color: var(--accent-color);
+}
+
+.inActiveStyle {
+  color: var(--text-color);
+}
+
+.logInButton,
+.signUpButton,
+.signOutButton {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: large;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Log In */
+.logInButton {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+.logInButton:hover {
+  color: rgb(145, 141, 141);
+}
+
+/* Sign Up */
+.signUpButton {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.signUpButton:hover {
+  background-color: #1f4ffd;
+}
+
+/* Sign Out */
+.signOutButton {
+  background-color: #ea3943;
+  color: white;
+}
+
+.signOutButton:hover {
+  background-color: #e01822;
+}
+
+.separator {
+  height: 1px;
+  margin-top: 5px;
+  background: linear-gradient(to right, transparent, var(--input-border), transparent);
+}
+
+/* Theme Toggle Container */
+.themeToggleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.themeToggleContainer:hover {
+  background-color: rgba(var(--text-color-rgb), 0.1);
+}
+
+/* Show desktop theme toggle by default */
+.desktopThemeToggle {
+  display: flex;
+}
+
+/* Hide mobile theme toggle by default */
+.mobileThemeToggle {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  /* Show mobile controls in mobile view */
+  .mobileControls {
+    display: flex;
+  }
+  
+  /* Hide desktop theme toggle in mobile view */
+  .desktopThemeToggle {
+    display: none;
+  }
+  
+  /* Show mobile theme toggle in mobile view */
+  .mobileThemeToggle {
+    display: flex;
+  }
+
+  .navElements {
+    position: absolute;
+    right: 0;
+    top: 80px;
+    background-color: var(--bg-color);
+    width: 0;
+    height: calc(100vh - 60px);
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+  }
+
+  .navElements.active {
+    width: 270px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .centerLinks {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px 0;
+  }
+
+  .authButtons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navElements a {
+    margin-bottom: 14px;
+  }
+}

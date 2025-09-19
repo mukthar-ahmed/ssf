@@ -1,0 +1,53 @@
+.textInputWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  padding: 10px;
+  background-color: transparent;
+  position: relative;
+}
+
+.inputField {
+  flex: 1;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  background-color: transparent;
+  color: var(--text-color);
+  padding: 7px 10px;
+}
+
+.inputField::placeholder {
+  color: var(--muted-text);
+}
+
+.togglePasswordButton {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px;
+  position: absolute;
+  right: 15px;
+  font-size: 15px;
+}
+
+.errorMessage {
+  color: #ea3943;
+  font-size: 14px;
+  width: 100%;
+  text-align: left;
+  margin-top: 4px;
+  padding-left: 5px;
+}
