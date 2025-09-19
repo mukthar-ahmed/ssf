@@ -54,7 +54,7 @@ function useAutoLogin() {
     (async function autoLoginApiCall() {
       try {
         // Step 1: Refresh token
-        const baseURL = process.env.REACT_APP_API_BASE_URL;
+        const baseURL = process.env.REACT_APP_API_URL;
         const refreshRes = await axios.get(`${baseURL}/refresh`, {
           withCredentials: true,
         });
