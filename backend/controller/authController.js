@@ -89,12 +89,16 @@ const authController = {
         //send to the client-side using cookies
         res.cookie('accessToken', accessToken, {
             maxAge: 1000 * 60 * 30,
-            httpOnly: true
+            httpOnly: true,
+            secure: true,
+            sameSite: "none"
         });
 
         res.cookie('refreshToken', refreshToken, {
             maxAge: 1000 * 60 * 60,
-            httpOnly: true
+            httpOnly: true,
+            secure: true,
+            sameSite: "none"
         });
 
         //6.update the response
@@ -171,12 +175,16 @@ const authController = {
 
         res.cookie('accessToken', accessToken, {
             maxAge: 1000 * 60 * 30,
-            httpOnly: true
+            httpOnly: true,
+            secure: true,
+            sameSite: "none"
         });
 
         res.cookie('refreshToken', refreshToken, {
             maxAge: 1000 * 60 * 60,
-            httpOnly: true
+            httpOnly: true,
+            secure: true,
+            sameSite: "none"
         });
         const userDto = new UserDTO(user)
         return res.status(200).json({ user: userDto, auth: true });
@@ -242,11 +250,15 @@ const authController = {
 
             res.cookie('accessToken', accessToken, {
                 maxAge: 1000 * 60 * 30,
-                httpOnly: true
+                httpOnly: true,
+                secure: true,
+                sameSite: "none"
             });
             res.cookie('refreshToken', refreshToken, {
                 maxAge: 1000 * 60 * 60,
-                httpOnly: true
+                httpOnly: true,
+                secure: true,
+                sameSite: "none"
             });
         } catch (error) {
             return next(error);

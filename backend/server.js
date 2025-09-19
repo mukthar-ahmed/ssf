@@ -26,13 +26,14 @@ app.use(express.urlencoded({ limit: "2mb", extended: true }));
 app.use(
     cors({
         origin: [
-            "https://ssf-taupe.vercel.app",  // ✅ your Vercel frontend
-            "https://ssf-5sxeuktux-umars-projects-e1054e9d.vercel.app", // ✅ fallback deployment URL
-            "http://localhost:3000"         // ✅ keep for local dev
+            "https://ssf-taupe.vercel.app",   // your Vercel domain
+            "https://ssf-5sxeuktux-umars-projects-e1054e9d.vercel.app", // fallback deployment URL
+            "http://localhost:3000"           // for dev
         ],
         credentials: true,
     })
 );
+
 
 
 
