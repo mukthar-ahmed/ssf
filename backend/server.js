@@ -14,15 +14,25 @@ app.use(express.json({ limit: "2mb" }));
 app.use(express.urlencoded({ limit: "2mb", extended: true }));
 
 
+// app.use(
+//     cors({
+//         origin: function (origin, callback) {
+//             return callback(null, true);
+//         },
+//         optionsSuccessStatus: 200,
+//         credentials: true,
+//     })
+// );
 app.use(
     cors({
-        origin: function (origin, callback) {
-            return callback(null, true);
-        },
-        optionsSuccessStatus: 200,
+        origin: [
+            "https://ssf.vercel.app",   // your deployed frontend on Vercel
+            "http://localhost:3000"     // keep for local development
+        ],
         credentials: true,
     })
 );
+
 
 app.use(express.json());
 
